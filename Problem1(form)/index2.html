@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+      
+    <h2>User Registration</h2>
+
+    <!-- Requirement (i): action set to post target, enctype configured for binary/file uploads -->
+    <form action="/submit-registration" method="POST" enctype="multipart/form-data">
+
+        <!--(a)-->
+        <label for="username">User-Name : </label>
+        <input id="username" type="text" placeholder="Rahul Gupta"><br><br>
+        
+        <!--(b)-->
+        <label for="bday">Birth-Date : </label>
+        <input type="date" id="bday" required><br><br>
+
+        <!--(c)-->
+        <label for="phone">Phone-No. : </label>
+        <input type="tel" id="phone" placeholder="+9189358737" minlength="10" maxlength="10" pattern="[6-9]{1}[0-9]{9}"><br><br>
+         
+        <!--(d)-->
+        <label for="email">Email : </label>
+        <input type="email" id="email" placeholder="name@gmail.com" required><br><br>
+
+        <!--(e)-->
+        <label for="file">Profile-Picture : </label> 
+        <input type="file" id="file" accept="image/png, image/jpeg" required></input><br><br>
+
+        <!--(f)-->
+        <label for="usercatagory">User-Catagory : </label>
+
+            <label for="FreeUser" class="radioBlc">Free User</label>
+            <input type="radio" id="FreeUser" for="FreeUser" name="usercatagory">
+
+            <label for="Paid User" class="radioBlc">Paid User</label>
+            <input type="radio" id="PaidUser" for="PaidUser" name="usercatagory"><br><br>
+        
+        <!--(g)-->
+        <label for="course" id="course">Course : </label>
+            <select>
+                <option value="MCA">MCA</option>
+                <option value="MBA">MBA</option>
+                <option value="M.TECH">M.TECH</option>
+            </select> <br><br>
+
+        <!--(h)-->
+        <label for="comment">Comment : </label>
+        <textarea id="comment" rows="3" cols="25" maxlength="200"></textarea> <br>
+        <small >characters remaining : <span id="char_count">200</span></small><br><br>
+
+        <!--(k) : satisfied -->
+        <!--(j) : submit & reset btn --> 
+        <input type="reset"  id="resetBtn" class="buttons">
+        <input type="submit" id="submitBtn" class="buttons">
+    </form>
+    
+    <script>
+        const text_area = document.getElementById("comment");
+        const char_count = document.getElementById("char_count");
+        const maxlength = 200;
+
+        // Listen for user typing inputs
+        text_area.addEventListener('input',()=>{
+            const remaining = maxlength - text_area.value.length;
+            char_count.textContent = remaining;
+        });
+
+        // Show native browser alert box
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', (e) => {
+            alert("Your form has been submitted successfully!");
+        });
+
+    </script>
+</body>
+</html>

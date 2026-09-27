@@ -1,0 +1,158 @@
+body{
+    background-color: hsl(0, 0%, 96%);
+}
+
+header{
+    position:sticky;
+    top: 0px;
+    background-color: hsl(0, 0%, 96%);
+}
+ul{               /*ul is a block lvl element*/
+    list-style-type: none;
+    display: flex;    
+    border : none ;
+    align-items: center;
+    min-height: 30px;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin-top : 0px;
+    flex-wrap: wrap;
+}
+li{
+    font-size: large;
+    font-weight: bold;
+    font-family: "Arial","sans-serif";
+    color:hsla(0, 0%, 0%, 0.692);
+    cursor:pointer;
+}
+#li_home{
+    color: hsl(120, 88%, 40%);
+}
+/*anchor tag handling :remember to give a in academics a seperate id*/
+a{
+    color:hsla(0, 0%, 0%, 0.692);
+    text-decoration: none;
+}
+#home_aca{  /*in academics.html*/
+    color: hsl(120, 88%, 40%);
+}
+#projects_home{
+    color: hsl(120, 88%, 40%);    
+}
+
+/*Academics.html*/
+table,td,th{
+    border:2px solid black;
+    border-collapse: collapse;
+    align-items: center;
+    padding:10px 20px;
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+th{
+    background-color: hsl(224, 100%, 50%);
+    color:white;
+}
+table tr:nth-child(odd){
+    background-color: hsl(197, 65%, 64%);
+}
+#Academics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+#aca_h2{
+    font-weight: bold;
+    color : hsla(0, 0%, 0%, 0.692);
+}
+table tr:hover td{
+    font-size: 1.8rem;
+    cursor : pointer;
+}
+
+/*projects html*/
+.projects_p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 55px;
+}
+
+/*main page (elements)*/
+
+#main_h1{
+   margin-top:100px;
+   color:hsl(120, 88%, 40%);
+}
+#main_p1{
+    margin-top: 1px;
+    font-size: 3rem;
+    color : black;
+}
+#main_div1{
+    width : 800px;
+    font-size: 1.2rem; 
+    display: inline-block;   
+}
+button{
+    font-size:1.2rem;
+    padding: 10px 20px;
+    font-weight: bold;
+    color : white;
+    background-color: hsl(120, 88%, 40%);
+    border-radius: 20px;
+    border : none;
+}
+
+#main_div2{
+    width : 600px;
+    font-size: 1.2rem;
+    margin-top:150px;
+    margin-left:1100px;
+}
+#main_span{
+    font-size: 3rem;
+    font-weight: bold;
+    color : hsl(120, 88%, 40%);
+}
+#div2_p1{
+    font-size: 3rem;
+    color : black;
+}
+#div_contact{
+    margin-top: 170px;
+}
+#main_h2{
+    color:hsl(120, 88%, 40%);
+}
+.contact{
+    font-size: 1.3rem;
+    font-family: "arial";
+}
+
+#Hire_me_button:hover{
+    background-color: hsl(120, 88%, 30%);
+    transition: 0.8s ease;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    margin-top: 100px;
+    max-width: 1800px;
+}
+
+
+/* Ensures image fits nicely within figure */
+.hero-section figure img {
+    
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+    
+}
+
+
